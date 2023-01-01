@@ -1,0 +1,21 @@
+---
+//JS code
+//import components
+import Card from "../components/card.astro";
+import Layout from "../components/layout.astro";
+
+const contenido1 =
+  "1- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, omnis.";
+const contenido2 =
+  "2- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, omnis.";
+---
+
+<Layout metaDesc="Servicios de Astro app">
+  <h1>Servicios</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, omnis.
+  </p>
+
+  <Card titulo={"Paginas web"} contenido={contenido1} />
+  <Card titulo={"Aplicaciones movil ñ"} contenido={contenido2} />
+</Layout>

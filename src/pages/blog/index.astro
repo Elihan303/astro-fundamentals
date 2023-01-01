@@ -1,0 +1,19 @@
+---
+import Layout from "../../components/layout.astro";
+const posts = await Astro.glob("../blog/posts/*.md");
+import comedor from "../../imagenes/comedor.jpg";
+---
+
+<Layout>
+  <h1>Pagina principal del blog</h1>
+  <img width="100" src={comedor} alt="imagen de comedor" />
+  <br />
+  {
+    posts.map((post) => (
+      <>
+        <a href={post.url}>{post.frontmatter.titulo}</a>
+        <br />
+      </>
+    ))
+  }
+</Layout>
